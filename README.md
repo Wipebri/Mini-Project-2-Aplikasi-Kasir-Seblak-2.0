@@ -68,7 +68,14 @@ Menghapus topping dapat dilakukan dengan menekan icon keranjang sampah pada topp
 
 ---
 
-### 4. Fitur Tambahan
+### 4. Logout
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/5085515e-601d-4c1b-bd71-af41a83cd8dc" />
+
+User dapat Melakukan logout atau keluar dari akun dengan menekan icon logout di pojok kanan atas, setelah itu akan diminta konfirmasi ulang apakah benar benar ingin keluar atau tidak.
+
+---
+
+### 5. Fitur Tambahan
 
 ### Dynamic Theme
 <img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/8ab38e91-5f1a-48ab-97d2-92e68b8450dc" />
