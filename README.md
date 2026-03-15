@@ -1,8 +1,11 @@
 # Mini-Project-2-Aplikasi-Kasir-Seblak-2.0
 | DWI PEBRIYANTO PRADANA | 2409116012 | SISTEM INFORMASI A 2024 |
 
-# SEBLUCKIN
-SEBLUCKIN adalah aplikasi kasir sederhana yang dirancang untuk membantu pengusaha seblak, dalam mengelola transaksi penjualan dan manajemen topping secara efisien. Aplikasi ini memungkinkan membantu pengusaha seblak untuk Menampilkan daftar topping, Menambahkan topping ke dalam keranjang dengan sistem pengurangan stok otomatis, Mengelola topping, Menghitung total pembayaran secara otomatis. Dengan tampilan yang sederhana, responsif, dan mudah digunakan, SEBLUCKIN membantu mempercepat proses transaksi serta meminimalisir kesalahan pencatatan stok dan perhitungan total harga. Aplikasi ini dikembangkan menggunakan Flutter dengan pendekatan stateful management dan struktur modular untuk menjaga keterbacaan serta maintainability kode.
+## SEBLUCKIN - Sistem Kasir Seblak
+SEBLUCKIN adalah aplikasi manajemen kasir berbasis mobile yang dirancang khusus untuk bisnis kuliner Seblak. Aplikasi ini membantu pemilik usaha dalam mengelola inventaris topping secara real-time dan memproses transaksi penjualan dengan antarmuka yang modern dan responsif.
+
+## 📝 Deskripsi Aplikasi
+Aplikasi ini dibangun menggunakan framework Flutter dengan integrasi Supabase sebagai backend untuk autentikasi dan database real-time. SEBLUCKIN memungkinkan pengguna untuk memantau stok topping, melakukan transaksi (hitung otomatis), serta mengelola data menu (CRUD) dalam satu genggaman. Dengan dukungan Dark Mode dan Light Mode, aplikasi ini memberikan kenyamanan visual bagi penggunanya di berbagai kondisi pencahayaan.
 
 ---
 
