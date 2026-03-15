@@ -12,9 +12,9 @@ void main() async {
   await dotenv.load(fileName: ".env");
 
   await Supabase.initialize(
-  url: dotenv.env['SUPABASE_URL']!,
-  anonKey: dotenv.env['SUPABASE_ANON_KEY']!,
-);
+    url: dotenv.env['SUPABASE_URL']!,
+    anonKey: dotenv.env['SUPABASE_ANON_KEY']!,
+  );
 
   runApp(const MyApp());
 }
@@ -30,10 +30,18 @@ class MyApp extends StatelessWidget {
       title: 'SEBLUCKIN',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        textTheme: GoogleFonts.poppinsTextTheme(),
-        primarySwatch: Colors.red,
         useMaterial3: true,
+        brightness: Brightness.light,
+        colorSchemeSeed: Colors.red,
+        textTheme: GoogleFonts.poppinsTextTheme(ThemeData.light().textTheme),
       ),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        brightness: Brightness.dark,
+        colorSchemeSeed: Colors.red,
+        textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
+      ),
+      themeMode: ThemeMode.system,
       home: session != null ? KasirPage() : AuthPage(),
     );
   }

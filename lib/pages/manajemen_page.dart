@@ -19,6 +19,14 @@ class _ManajemenPageState extends State<ManajemenPage> {
   String? errorHarga;
   String? errorStok;
 
+  String toTitleCase(String text) {
+    if (text.isEmpty) return text;
+    return text.split(' ').map((word) {
+      if (word.isEmpty) return word;
+      return word[0].toUpperCase() + word.substring(1).toLowerCase();
+    }).join(' ');
+  }
+
   Future<void> simpanData() async {
     setState(() {
       errorNama = null;
@@ -26,7 +34,7 @@ class _ManajemenPageState extends State<ManajemenPage> {
       errorStok = null;
     });
 
-    String nama = namaController.text.trim();
+    String nama = toTitleCase(namaController.text.trim());
     int? harga = int.tryParse(hargaController.text);
     int? stok = int.tryParse(stokController.text);
 
@@ -75,6 +83,7 @@ class _ManajemenPageState extends State<ManajemenPage> {
         }).match({'id': idEdit!});
         setState(() => idEdit = null); 
       }
+
       namaController.clear();
       hargaController.clear();
       stokController.clear();
@@ -148,7 +157,7 @@ class _ManajemenPageState extends State<ManajemenPage> {
             if (idEdit != null)
               const Padding(
                 padding: EdgeInsets.only(bottom: 8),
-                child: Text("Menngedit Topping", style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+                child: Text("Mengedit Topping", style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
               ),
 
             TextField(

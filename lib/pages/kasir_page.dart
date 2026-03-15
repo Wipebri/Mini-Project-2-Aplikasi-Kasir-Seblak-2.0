@@ -52,9 +52,9 @@ class _KasirPageState extends State<KasirPage> {
       }
 
       setState(() => keranjang.clear());
+      
     } catch (e) {
-      Get.snackbar("Error", "Gagal: $e",
-          backgroundColor: Colors.red, colorText: Colors.white);
+      print("Gagal memproses pembayaran: $e");
     }
   }
 
@@ -68,6 +68,8 @@ class _KasirPageState extends State<KasirPage> {
 
   @override
   Widget build(BuildContext context) {
+    bool isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
@@ -78,8 +80,18 @@ class _KasirPageState extends State<KasirPage> {
         ),
         actions: [
           IconButton(
-              icon: const Icon(Icons.inventory, color: Colors.white),
-              onPressed: () => Get.to(() => ManajemenPage())),
+            icon: Icon(
+              isDark ? Icons.dark_mode : Icons.light_mode,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              Get.changeThemeMode(isDark ? ThemeMode.light : ThemeMode.dark);
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.inventory, color: Colors.white),
+            onPressed: () => Get.to(() => ManajemenPage()),
+          ),
           IconButton(
             icon: const Icon(Icons.logout, color: Colors.white),
             onPressed: () {
@@ -107,6 +119,7 @@ class _KasirPageState extends State<KasirPage> {
           ),
         ],
       ),
+
       body: Column(
         children: [
           Expanded(
@@ -148,7 +161,11 @@ class _KasirPageState extends State<KasirPage> {
                             Text("Rp. ${topping.harga}"),
                             Text(
                               sisaStok <= 0 ? "HABIS" : "Stok: $sisaStok",
-                              style: TextStyle(color: sisaStok <= 0 ? Colors.red : Colors.black54),
+                              style: TextStyle(
+                                color: sisaStok <= 0 
+                                    ? Colors.red 
+                                    : (isDark ? Colors.white70 : Colors.black54),
+                              ),
                             ),
                           ],
                         ),
@@ -159,7 +176,8 @@ class _KasirPageState extends State<KasirPage> {
               },
             ),
           ),
-          const Divider(),
+
+          const Divider(height: 1),
           Expanded(
             flex: 1,
             child: ListView.builder(
@@ -167,7 +185,10 @@ class _KasirPageState extends State<KasirPage> {
               itemBuilder: (context, index) {
                 final item = keranjang[index];
                 return ListTile(
-                  title: Text("${item.topping.nama} x${item.qty}"),
+                  title: Text(
+                    "${item.topping.nama} x${item.qty}",
+                    style: TextStyle(color: isDark ? Colors.white : Colors.black),
+                  ),
                   subtitle: Text("Total: Rp ${item.topping.harga * item.qty}"),
                   trailing: IconButton(
                     icon: const Icon(Icons.remove_circle, color: Colors.red),
@@ -177,18 +198,29 @@ class _KasirPageState extends State<KasirPage> {
               },
             ),
           ),
+
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, -2))],
+              color: isDark ? const Color(0xFF1E1E1E) : Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: isDark ? Colors.black54 : Colors.black12, 
+                  blurRadius: 4, 
+                  offset: const Offset(0, -2)
+                )
+              ],
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   "Total: Rp. ${getTotal()}",
-                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 18, 
+                    fontWeight: FontWeight.bold,
+                    color: isDark ? Colors.white : Colors.black,
+                  ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -197,7 +229,10 @@ class _KasirPageState extends State<KasirPage> {
                     padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
                   ),
                   onPressed: keranjang.isEmpty ? null : prosesPembayaran,
-                  child: const Text("Bayar", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                  child: const Text(
+                    "Bayar", 
+                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)
+                  ),
                 )
               ],
             ),
@@ -206,4 +241,10 @@ class _KasirPageState extends State<KasirPage> {
       ),
     );
   }
+}
+
+class ItemKeranjang {
+  final Topping topping;
+  int qty;
+  ItemKeranjang({required this.topping, required this.qty});
 }

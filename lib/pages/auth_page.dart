@@ -100,17 +100,47 @@ class _AuthPageState extends State<AuthPage> {
 
   @override
   Widget build(BuildContext context) {
+    bool isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
-      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        actions: [
+          IconButton(
+            icon: Icon(
+              isDark ? Icons.dark_mode : Icons.light_mode, 
+              color: Colors.red
+            ),
+            onPressed: () {
+              Get.changeThemeMode(isDark ? ThemeMode.light : ThemeMode.dark);
+            },
+          )
+        ],
+      ),
       body: Center(
         child: SingleChildScrollView(
-          padding: EdgeInsets.all(24),
+          padding: const EdgeInsets.all(24),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("SEBLUCKIN", style: GoogleFonts.poppins(fontSize: 36, fontWeight: FontWeight.bold, color: Colors.red)),
-              Text("Sistem Kasir Seblak", style: GoogleFonts.poppins(color: Colors.black, fontWeight: FontWeight.w600)),
-              SizedBox(height: 30),
+              Text(
+                "SEBLUCKIN", 
+                style: GoogleFonts.poppins(
+                  fontSize: 36, 
+                  fontWeight: FontWeight.bold, 
+                  color: Colors.red
+                )
+              ),
+              Text(
+                "Sistem Kasir Seblak", 
+                style: GoogleFonts.poppins(
+
+                  color: Theme.of(context).textTheme.bodyLarge?.color, 
+                  fontWeight: FontWeight.w600
+                )
+              ),
+              const SizedBox(height: 30),
 
               if (!_isLogin) ...[
                 TextField(
