@@ -180,3 +180,16 @@ Menampilkan teks seperti nama topping, harga, stok, dan total pembayaran.
 <img width="300" height="178" alt="image" src="https://github.com/user-attachments/assets/da656730-c8a7-4c92-9f64-21b300dbee43" />
 
 Digunakan untuk mengatur jenis font agar tampilan lebih modern dan konsisten.
+
+--- 
+
+## 🚀 Teknologi yang Digunakan
+- **Framework:** Flutter
+- **State Management:** GetX
+- **Backend:** Supabase (Auth & Database)
+- **Font:** Google Fonts
+- **Environment:** Flutter Dotenv
+
+---
+
+**Note:** Pastikan untuk mengonfigurasi file .env yang berisi SUPABASE_URL dan SUPABASE_ANON_KEY sebelum menjalankan aplikasi ini.
