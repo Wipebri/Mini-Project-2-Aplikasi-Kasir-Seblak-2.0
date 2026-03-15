@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorSchemeSeed: Colors.red,
         textTheme: GoogleFonts.poppinsTextTheme(ThemeData.dark().textTheme),
       ),
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.light,
       home: session != null ? KasirPage() : AuthPage(),
     );
   }

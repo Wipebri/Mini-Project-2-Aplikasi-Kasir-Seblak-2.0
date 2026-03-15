@@ -76,6 +76,7 @@ class _AuthPageState extends State<AuthPage> {
           email: _emailController.text.trim(),
           password: _passwordController.text.trim(),
         );
+        Get.offAll(() => KasirPage());
       } else {
         await Supabase.instance.client.auth.signUp(
           email: _emailController.text.trim(),
@@ -85,8 +86,15 @@ class _AuthPageState extends State<AuthPage> {
             'phone': _phoneController.text.trim(),
           },
         );
+
+        await Supabase.instance.client.auth.signOut();
+
+        setState(() {
+          _isLogin = true;
+          _passwordController.clear();
+          _errorPesanTunggal = "Registrasi Berhasil! Silakan Login.";
+        });
       }
-      Get.offAll(() => KasirPage());
     } catch (e) {
       setState(() {
         _errorPesanTunggal = _isLogin 
@@ -135,7 +143,6 @@ class _AuthPageState extends State<AuthPage> {
               Text(
                 "Sistem Kasir Seblak", 
                 style: GoogleFonts.poppins(
-
                   color: Theme.of(context).textTheme.bodyLarge?.color, 
                   fontWeight: FontWeight.w600
                 )
@@ -147,12 +154,12 @@ class _AuthPageState extends State<AuthPage> {
                   controller: _namaController,
                   decoration: InputDecoration(
                     labelText: "Nama Lengkap",
-                    border: OutlineInputBorder(),
+                    border: const OutlineInputBorder(),
                     errorText: _errorNama,
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: const Icon(Icons.person),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
               ],
 
               TextField(
@@ -161,12 +168,12 @@ class _AuthPageState extends State<AuthPage> {
                 onChanged: (val) => setState(() => _errorPesanTunggal = null),
                 decoration: InputDecoration(
                   labelText: "Email",
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   errorText: _isLogin ? null : _errorEmail,
-                  prefixIcon: Icon(Icons.email),
+                  prefixIcon: const Icon(Icons.email),
                 ),
               ),
-              SizedBox(height: 15),
+              const SizedBox(height: 15),
 
               if (!_isLogin) ...[
                 TextField(
@@ -174,12 +181,12 @@ class _AuthPageState extends State<AuthPage> {
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                     labelText: "Nomor Telepon",
-                    border: OutlineInputBorder(),
+                    border: const OutlineInputBorder(),
                     errorText: _errorPhone,
-                    prefixIcon: Icon(Icons.phone),
+                    prefixIcon: const Icon(Icons.phone),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
               ],
 
               TextField(
@@ -188,9 +195,9 @@ class _AuthPageState extends State<AuthPage> {
                 onChanged: (val) => setState(() => _errorPesanTunggal = null),
                 decoration: InputDecoration(
                   labelText: "Password",
-                  border: OutlineInputBorder(),
+                  border: const OutlineInputBorder(),
                   errorText: _isLogin ? null : _errorPassword,
-                  prefixIcon: Icon(Icons.lock),
+                  prefixIcon: const Icon(Icons.lock),
                   suffixIcon: IconButton(
                     icon: Icon(_obscurePassword ? Icons.visibility_off : Icons.visibility),
                     onPressed: () => setState(() => _obscurePassword = !_obscurePassword),
@@ -199,27 +206,31 @@ class _AuthPageState extends State<AuthPage> {
               ),
               
               if (_errorPesanTunggal != null) ...[
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Text(
                   _errorPesanTunggal!,
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.poppins(color: Colors.red, fontSize: 13, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.poppins(
+                    color: _errorPesanTunggal!.contains("Berhasil") ? Colors.blue : Colors.red, 
+                    fontSize: 13, 
+                    fontWeight: FontWeight.bold
+                  ),
                 ),
               ],
 
-              SizedBox(height: 25),
+              const SizedBox(height: 25),
 
               _isLoading 
-                ? CircularProgressIndicator(color: Colors.red) 
+                ? const CircularProgressIndicator(color: Colors.red) 
                 : ElevatedButton(
                     onPressed: _handleAuth,
-                    child: Text(_isLogin ? "Login" : "Register"),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red, 
                       foregroundColor: Colors.white, 
-                      minimumSize: Size(double.infinity, 55),
+                      minimumSize: const Size(double.infinity, 55),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                     ),
+                    child: Text(_isLogin ? "Login" : "Register"),
                   ),
               
               TextButton(
