@@ -9,46 +9,76 @@ Aplikasi ini dibangun menggunakan framework Flutter dengan integrasi Supabase se
 
 ---
 
-## Fitur Aplikasi
+## ✨ Fitur Utama
 
-### 1. Kasir
-<img width="380" height="570" alt="image" src="https://github.com/user-attachments/assets/ee379a8f-2754-4ee2-b77d-b063a135784a" />
+### 1. Sistem Registrasi
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/7ca48324-4315-473e-af78-c3f59d97a9fc" />
 
-Aplikasi ini memiliki fitur utama berupa tampilan daftar topping interaktif yang memudahkan kasir dalam memilih menu dengan cepat. Setiap topping menampilkan informasi nama, harga, dan stok yang tersedia, sehingga pengguna dapat langsung mengetahui ketersediaan bahan secara real-time. Pengguna dapat menambahkan, menghapus, atau memperbarui topping dengan masuk ke menu manajemen topping, yaitu dengan menekan tombol gergi di pojk kanan atas.
+User baru bisa melakukan registrasi atau membuat akun jika belum memiliki akun. user akan diminta untuk mengisi nama lengkap, email, nomor telpon dan password yang akan ia gunakan.
 
-<img width="380" height="570" alt="image" src="https://github.com/user-attachments/assets/6ec7dbc2-f1cb-470e-944e-13a7707a69b8" />
+---
+
+### 2. Sistem Login
+
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/e8be34df-e2d2-4ef8-ad34-29f9f62b12f2" />
+
+User yang sudah memiliki akun dapat masuk atau melakukan login menggunakan email dan password yang digunakan saat mendaftar. selama sesi masih aktif pengguna tidak perlu melakukan login kembali.
+
+---
+
+### 2. Kasir
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/e581ff97-5ea6-4717-80e3-6b2fd064fc9f" />
+
+Aplikasi ini memiliki fitur utama berupa tampilan daftar topping interaktif yang memudahkan kasir dalam memilih menu dengan cepat. Setiap topping menampilkan informasi nama, harga, dan stok yang tersedia, sehingga pengguna dapat langsung mengetahui ketersediaan bahan secara real-time. Pengguna dapat menambahkan, menghapus, atau memperbarui topping dengan masuk ke menu manajemen topping, yaitu dengan menekan tombol inventory di pojok kanan atas.
+
+
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/0d9ac3f5-bd9e-43b9-b45d-20e7327b62d6" />
 
 Aplikasi ini juga memiliki sistem keranjang belanja yang secara otomatis menampung topping yang dipilih. Ketika sebuah topping ditekan, item tersebut akan masuk ke dalam keranjang dan stok akan berkurang secara otomatis. Pengguna juga dapat mengurangi jumlah topping atau menghapusnya dari keranjang dengan menekan tombol "-" pada toping yang ingin dikurangi dari keranjang, dan sistem akan menyesuaikan kembali jumlah stok yang tersedia. Total harga transaksi dihitung secara otomatis berdasarkan jumlah dan harga masing-masing topping, sehingga meminimalkan kesalahan perhitungan manual.
 
-<img width="380" height="570" alt="image" src="https://github.com/user-attachments/assets/fa07cd97-a7c7-4368-bc7a-d25a02a43f98" />
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/fad3336f-bd90-47e7-9475-9d4c2c0caf39" />
 
 Ketika menekan tombol bayar maka topping dikeranjang akan hilang yang mengartikan transaksi sudah dilakukan dan stok sesuai saat dilakukan pembayaran.
 
 ---
 
-### 2. Manajemen Toppoing
-<img width="380" height="570" alt="image" src="https://github.com/user-attachments/assets/9e0d2b7a-5d23-4659-846c-8c0d556eb243" />
+### 3. Manajemen Topping
+
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/98395fb2-9b4c-4ba5-a916-6f58e72afd26" />
 
 Aplikasi ini juga menyediakan fitur manajemen topping yang memungkinkan pengguna untuk menambahkan, mengubah, dan menghapus data topping. Fitur ini memberikan fleksibilitas kepada pemilik usaha dalam mengatur harga, memperbarui stok, maupun menyesuaikan menu sesuai kebutuhan.
+Tambah Topping: Menambah menu baru dengan pengecekan duplikasi nama.
 
-#### Menambahkan Topping
-<img width="380" height="570" alt="image" src="https://github.com/user-attachments/assets/f9535cec-5c9a-4901-b608-af7d1aa637fe" />
+### Menambah Topping
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/ae7d8bea-507d-4d53-ab48-c5281bbeed14" />
 
 Menambahkan topping dapat dilakukan dengan mengisi kolom nama topping, harga, dan stok. setelah itu pengguna tinggal menekan tambah topping maka toping akan ditambahkan ke dalam aplikasi.
 
-#### Menghapus Topping
-<img width="380" height="570" alt="image" src="https://github.com/user-attachments/assets/4abd0afe-6af3-45c0-b4ee-5d4e2d786f63" />
+### Mengedit Topping
+
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/9e0723ed-9bc4-44a1-9dba-00845ebf7c88" />
+
+Mengedit topping dapat dilakukan dengan menekan icon pensil pada topping yang ingin di ubah, akan muncul tulisan perbarui data dan kolom nama topping, harga, dan stok akan terisi otomatos dengan topping yang ingin di ubah. pengguna bisa langsung memngubah sesuai dengan yang ia inginkan. jika ingin menyimpan perubahan maka tinggal menekan perbarui topping, jika tidak maka tekan batal.
+
+### Menghapus Topping
+
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/003fa46e-0480-4a5b-95c1-6ad22bae47df" />
 
 Menghapus topping dapat dilakukan dengan menekan icon keranjang sampah pada topping yang ingin di hapus, setelah ditekan topping otomatis aka hilang.
 
-#### Memperbarui Topping
-<img width="380" height="570" alt="image" src="https://github.com/user-attachments/assets/971db30f-f2d4-4ee5-bbde-5f1d8a2c9328" />
+---
 
-Memperbarui toping dapat dilakukan dengan menekan icon pensil pada toping yang ingin di ubah, akan muncul tulisan perbarui data dan kolom nama topping, harga, dan stok akan terisi otomatos dengan topping yang ingin di ubah. pengguna bisa langsung memngubah sesuai dengan yang ia inginkan. jika ingin menyimpan perubahan maka tinggal menekan perbarui topping, jika tidak maka tekan batal.
+### 4. Fitur Tambahan
+
+### Dynamic Theme
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/8ab38e91-5f1a-48ab-97d2-92e68b8450dc" />
+<img width="380" height="570" alt="Image" src="https://github.com/user-attachments/assets/0ede57a1-6b38-455d-ac49-06e464aaae1c" />
+
+Mendukung perpindahan tema Gelap dan Terang dengan menekan icon matahari atau bulan di kanan atas.
 
 ---
 
-## Penggunaan Widget
+## 🛠 Penggunaan Widget
 ### 1. Scaffold
 <img width="300" height="293" alt="image" src="https://github.com/user-attachments/assets/06fca2b6-b8bb-4897-a915-f34ba7fe7fcb" />
 
