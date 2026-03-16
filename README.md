@@ -95,16 +95,15 @@ Sebagai kerangka Utama yang menyediakan dasar seperti AppBar dan body, sehingga 
 
 ### 2. AppBar
 <img width="300" height="260" alt="image" src="https://github.com/user-attachments/assets/e5bbcdff-938e-4cd8-b180-08fe5d068e01" />
-<img width="300" height="308" alt="image" src="https://github.com/user-attachments/assets/afa42c1b-9648-43b6-a5df-af9fe377dac6" />
+<img width="300" height="250" alt="Image" src="https://github.com/user-attachments/assets/19e7b570-62a3-4e8c-ac87-931b2c681101" />
 
-Bagian paling atas aplikasi yang berisi SEBLUCKIN, Manajemen Topping, icon setting dan kembali.
+Bagian paling atas aplikasi yang berisi SEBLUCKIN, Manajemen Topping, icon theme, icon inventory, log out dan kembali.
 
 ---
 
 ### 3. Column
-<img width="300" height="208" alt="image" src="https://github.com/user-attachments/assets/ba3b8af6-61eb-4f3d-87d7-19b049601f95" />
-
-<img width="300" height="586" alt="image" src="https://github.com/user-attachments/assets/2f3b65af-6270-4f7e-90e9-35ff67fb467e" />
+<img width="300" height="277" alt="Image" src="https://github.com/user-attachments/assets/4f2223fa-dbd7-483e-b575-1b7c6ecf78cf" />
+<img width="300" height="665" alt="Image" src="https://github.com/user-attachments/assets/e360eaca-4aba-469b-9d0f-ff407f341bab" />
 
 Menyusun widget secara vertikal dari atas ke bawah, seperti grid topping, keranjang, dan bagian total pembayaran.
 
@@ -119,7 +118,7 @@ Menyusun widget secara horizontal, misalnya untuk menampilkan tombol Tambah/Upda
 ---
 
 ### 5. Expanded
-<img width="300" height="173" alt="image" src="https://github.com/user-attachments/assets/7a7162bc-279b-4bf0-ad93-9c9af33d9443" />
+<img width="300" height="206" alt="Image" src="https://github.com/user-attachments/assets/ddc16cf9-479e-4398-9594-152913b8cd96" />
 
 Mengatur pembagian ruang dalam Column atau Row agar proporsional. Pada halaman kasir, Expanded digunakan untuk membagi area grid topping dan keranjang.
 
@@ -134,8 +133,8 @@ Digunakan untuk membungkus widget lain sekaligus mengatur warna latar, padding, 
 
 ### 7. GridView.builder
 <img width="300" height="287" alt="image" src="https://github.com/user-attachments/assets/d9447c46-9f85-4924-a9bf-ab70e8998efc" />
+<img width="300" height="603" alt="Image" src="https://github.com/user-attachments/assets/40a8c4c1-ad03-4f69-a0ff-694f3e830b89" />
 
-<img width="300" height="641" alt="image" src="https://github.com/user-attachments/assets/415d6b8e-9df9-4cac-976a-59ad159c8c39" />
 
 Menampilkan daftar topping dalam bentuk grid secara dinamis sesuai jumlah data. Cocok untuk tampilan menu berbentuk katalog.
 
@@ -151,17 +150,16 @@ Menampilkan daftar item dalam keranjang secara dinamis berdasarkan jumlah item y
 ---
 
 ### 9. Card
-<img width="300" height="228" alt="image" src="https://github.com/user-attachments/assets/129ad96a-44c6-4860-83eb-106368511161" />
+<img width="300" height="173" alt="Image" src="https://github.com/user-attachments/assets/798f8ed3-75d4-4543-8ad3-46e8b1b5ebca" />
+<img width="300" height="603" alt="Image" src="https://github.com/user-attachments/assets/40a8c4c1-ad03-4f69-a0ff-694f3e830b89" />
 
-<img width="300" height="641" alt="image" src="https://github.com/user-attachments/assets/415d6b8e-9df9-4cac-976a-59ad159c8c39" />
 Memberikan tampilan kotak dengan bayangan untuk setiap item topping atau data topping agar terlihat rapi dan terpisah.
 
 ---
 
 ### 10. TextField
-<img width="300" height="168" alt="image" src="https://github.com/user-attachments/assets/4413693d-9b54-48ea-b001-36f0a9b14d31" />
-
-<img width="300" height="332" alt="image" src="https://github.com/user-attachments/assets/93489b27-7614-4217-ae7f-0f1db13d446d" />
+<img width="300" height="205" alt="Image" src="https://github.com/user-attachments/assets/b7afe697-6325-4709-96d0-1fa2bba5b5b6" />
+<img width="300" height="370" alt="Image" src="https://github.com/user-attachments/assets/aab087ea-beb9-4afc-b1e9-fae0d12cbcb4" />
 
 Digunakan untuk input data seperti nama topping, harga, dan stok pada halaman manajemen.
 
@@ -177,8 +175,7 @@ Digunakan untuk tombol utama seperti Tambah Topping, Update Topping, dan Bayar. 
 ---
 
 ### 12. OutlinedButton
-<img width="300" height="215" alt="image" src="https://github.com/user-attachments/assets/6d22496a-1cd2-494a-83e2-a89f75fb6732" />
-
+<img width="300" height="223" alt="Image" src="https://github.com/user-attachments/assets/d6ee4c63-e9e9-45ac-ae31-f28eba484bf0" />
 <img width="300" height="121" alt="image" src="https://github.com/user-attachments/assets/9a87eea7-370e-48bb-a88b-6f93240bab54" />
 
 Digunakan untuk tombol sekunder seperti Batal, dengan tampilan outline
@@ -196,8 +193,7 @@ Digunakan untuk tombol berbentuk ikon, seperti tombol edit, hapus, dan settings.
 
 ### 14. InkWell
 <img width="300" height="228" alt="image" src="https://github.com/user-attachments/assets/52058d63-1141-4ed6-8f29-f99900289b7b" />
-
-<img width="300" height="641" alt="image" src="https://github.com/user-attachments/assets/415d6b8e-9df9-4cac-976a-59ad159c8c39" />
+<img width="300" height="603" alt="Image" src="https://github.com/user-attachments/assets/40a8c4c1-ad03-4f69-a0ff-694f3e830b89" />
 
 Memberikan efek sentuhan (ripple effect) pada Card saat ditekan, sehingga topping bisa dipilih.
 
@@ -219,6 +215,20 @@ Menampilkan teks seperti nama topping, harga, stok, dan total pembayaran.
 Digunakan untuk mengatur jenis font agar tampilan lebih modern dan konsisten.
 
 --- 
+### 17. Alert dialog
+<img width="300" height="142" alt="Image" src="https://github.com/user-attachments/assets/c120dc2c-0e72-4dd4-a938-7ae638a63fe5" />
+<img width="300" height="325" alt="Image" src="https://github.com/user-attachments/assets/0051a786-1d6d-45e8-8caf-d57df9fe74f2" />
+
+Memberikan konfirmasi sebelum aksi krusial contohnya seperti logout
+
+---
+
+### 18. CircularProgressIndicator
+<img width="300" height="266" alt="Image" src="https://github.com/user-attachments/assets/c32cb1e2-74e1-47a8-b9c6-78d7afca9275" />
+
+Menampilkan status loading saat proses autentikasi.
+
+---
 
 ## 🚀 Teknologi yang Digunakan
 - **Framework:** Flutter
