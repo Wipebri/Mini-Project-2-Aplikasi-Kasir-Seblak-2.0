@@ -215,6 +215,20 @@ Menampilkan teks seperti nama topping, harga, stok, dan total pembayaran.
 Digunakan untuk mengatur jenis font agar tampilan lebih modern dan konsisten.
 
 --- 
+### 17. Alert dialog
+<img width="300" height="142" alt="Image" src="https://github.com/user-attachments/assets/c120dc2c-0e72-4dd4-a938-7ae638a63fe5" />
+<img width="300" height="325" alt="Image" src="https://github.com/user-attachments/assets/0051a786-1d6d-45e8-8caf-d57df9fe74f2" />
+
+Memberikan konfirmasi sebelum aksi krusial contohnya seperti logout
+
+---
+
+### 18. CircularProgressIndicator
+<img width="300" height="266" alt="Image" src="https://github.com/user-attachments/assets/c32cb1e2-74e1-47a8-b9c6-78d7afca9275" />
+
+Menampilkan status loading saat proses autentikasi.
+
+---
 
 ## 🚀 Teknologi yang Digunakan
 - **Framework:** Flutter
